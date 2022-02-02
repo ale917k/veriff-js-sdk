@@ -20,7 +20,13 @@ interface Params {
   vendorData?: string;
 }
 
-const Veriff = (options: Options) => {
+interface ReturnedObj {
+  params: Params;
+  setParams: (newParams: Params) => void;
+  mount: (mountOptions: MountOptions) => void;
+}
+
+const Veriff = (options: Options): ReturnedObj => {
   const { host = 'https://api.veriff.me', apiKey, parentId, onSession } = options;
   const onSessionCallback = onSession;
   let mountedOptions: MountOptions = { loadingText: 'Loading...', submitBtnText: 'Start Verification' };
@@ -83,4 +89,4 @@ const Veriff = (options: Options) => {
   };
 };
 
-export = Veriff;
+export { Veriff };

@@ -9,7 +9,8 @@
     "dev": "webpack --progress --colors --watch --config webpack/webpack.config.js",
     "test": "jest",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
-    "lint": "eslint --ext=js,ts src"
+    "lint": "eslint --ext=js,ts src",
+    "prepare": "npm run build"
   },
   "author": "Ilia Aphtsiauri <ilia@veriff.me> (https://github.com/iaptsiauri)",
   "contributors": [
